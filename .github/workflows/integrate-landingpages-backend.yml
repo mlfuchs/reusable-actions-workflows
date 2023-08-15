@@ -2,10 +2,6 @@ name: "Integrate"
 
 on:
   workflow_call:
-    secrets:
-      COMPOSER_GITHUB_TOKEN:
-        required: true
-        description: 'GitHub Token used to install private composer packages.'
     inputs:
       phpVersion:
         description: 'Version of PHP to be used'
@@ -26,7 +22,7 @@ jobs:
         with:
           php-version: ${{ inputs.phpVersion }}
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, bcmath, intl
-
+¨
       - uses: ramsey/composer-install@v2
 
       - name: Create new Jigsaw Build
