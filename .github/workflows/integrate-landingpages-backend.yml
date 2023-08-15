@@ -22,7 +22,7 @@ jobs:
         with:
           php-version: ${{ inputs.phpVersion }}
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, bcmath, intl
-¨
+
       - uses: ramsey/composer-install@v2
 
       - name: Create new Jigsaw Build
